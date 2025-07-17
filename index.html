@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生ポートフォリオ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .skill h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .skill p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+            line-height: 1.3;
+        }
+
+        .goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .goal {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .goal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+        }
+
+        .goal h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+
+        .goal p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .contact {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .contact a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            margin: 0 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .contact a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>宮田　拓幸</h1>
+            <p>麻生情報ビジネス専門学校</p>
+        </div>
+
+        <div class="card">
+            <h2>👋 自己紹介</h2>
+            <p>麻生情報ビジネス専門学校でプログラミングを学んでいる学生です。将来はエンジニアとして活躍したいと考えており、基礎からしっかりと学習を進めています。</p>
+        </div>
+
+        <div class="card">
+            <h2>💻 技術スキル</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Python</h3>
+                    <p>基本的な文法とライブラリ</p>
+                </div>
+                <div class="skill">
+                    <h3>HTML/CSS</h3>
+                    <p>Webページの構造とスタイル</p>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <p>基本的な動的処理</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <h2>📚 学習状況</h2>
+            <p><strong>現在:</strong>2年 </p>
+            <p><strong>専攻:</strong> AI&Iot専攻</p>
+            <p><strong>資格</strong>:</strong>FE,j検3級,エクセル検定3級,全商情報処理検定2級</p>
+        </div>
+
+        <div class="card">
+            <h2>🎯 今後の目標</h2>
+            <div class="goals">
+                <div class="goal">
+                    <h3>セキュマネの合格</h3>
+                    <p>資格取得を目指す</p>
+                </div>
+                <div class="goal">
+                    <h3>作品制作</h3>
+                    <p>学習した技術を活用して作る</p>
+                </div>
+                <div class="goal">
+                    <h3>就職活動</h3>
+                    <p>技術をつけて就職活動に挑む</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📧 連絡先</h2>
+            <div class="contact">
+                <a href="2401313@s.asojuku.ac.jpm">メール</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
